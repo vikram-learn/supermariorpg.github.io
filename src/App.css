@@ -1,38 +1,216 @@
-.App {
-  text-align: center;
+/* google imaports */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* root  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: #f8f9fa;
+    --primary: #0d6efd;
+    font-family: 'Poppins', sans-serif;
+}
+/* variable  */
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Navbar */
+header {
+    /* width: 100vw; */
+    height: fit-content;
+    box-shadow: 0px -3px 7px #888888
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 17px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* logo */
+.logo {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0px;
+
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.logo img {
+    height: 76px;
 }
 
-.App-link {
-  color: #61dafb;
+/* nav-menu */
+.nav-menu {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-menu a {
+    text-decoration: none;
+    margin-left: 43px;
+    color: black;
+    position: relative;
+
+}
+
+.nav-menu a:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    width: 0%;
+    height: 2px;
+    background-color: black;
+    left: 0;
+    transition: all ease 0.4s;
+
+}
+
+.nav-menu a:hover:before {
+    width: 100%;
+}
+
+/* Addmission */
+.nav-addmission {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-addmission button {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+@media only screen and (max-width: 950px) {
+    .nav-menu a {
+        margin-left: 24px;
+    }
+
+    nav {
+        font-size: 13px;
+
+    }
+
+    .nav-addmission button {
+        font-size: 15px;
+
+    }
+
+
+}
+
+@media only screen and (max-width: 645px) {
+    .nav-menu a {
+        margin-left: 12px;
+    }
+
+    nav {
+        font-size: 10px;
+
+    }
+
+    .nav-addmission button {
+        font-size: 11px;
+
+    }
+
+    .logo img {
+        height: 70px;
+    }
+
+
+}
+
+@media only screen and (max-width: 460px) {
+    .nav-menu a {
+        margin-left: 12px;
+    }
+
+    nav {
+        font-size: 10px;
+    }
+
+    .nav-addmission button {
+        font-size: 9px;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    .logo {
+        width: 20%;
+        padding-left: 30px;
+    }
+
+    .nav-menu {
+        width: 55%;
+    }
+}
+@media only screen and (max-width: 430px) {
+    .nav-menu a {
+        margin-left: 9px;
+    }
+
+    nav {
+        font-size: 9px;
+    }
+
+    .nav-addmission button {
+        font-size: 7px;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    .logo {
+        width: 20%;
+        padding-left: 30px;
+    }
+
+    .nav-menu {
+        width: 55%;
+    }
+}
+/* Content Setting */
+h2{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 35px;
+    font-weight: 700;
+}
+h3{
+    margin: 20px 0px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+
+}
+p{
+    line-height: 28px;
+    font-size: 19px;
+    margin-top: 25px;
+    font-family: 'Roboto', sans-serif;
+}
+.footer{
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 36px;
 }
